@@ -1,0 +1,12 @@
+a. ('real3', 'real4', 'real5')
+b. ('real3', 'real4', 'rand3')
+
+c. ('real3', 'rand3', 'rand10')
+d. ('real3', 'real5', 'rand3')
+
+e. ('real4', 'rand3', 'rand10')
+f. ('real4', 'real5', 'rand3')
+
+g. ('real5', 'rand3', 'rand10')
+h. ('rand3', 'rand10', 'rand5')
+

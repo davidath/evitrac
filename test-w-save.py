@@ -161,7 +161,7 @@ def evitram(evitramd):
             # Save reconstruction
             utils.save_OOM(sess, evitram_dict['conv_in'], XX_full,
             evitram_dict['conv_out'],
-            path=cp.get('Experiment', 'PX_XREC_TRAIN'),
+            path='COND_+'cp.get('Experiment', 'PX_XREC_TRAIN'),
             batch_size=batch_size)
         else:
             px_Z_latent = utils.run_OOM(sess, evitram_dict['sda_in'], XX_full,

@@ -150,17 +150,17 @@ def evitram(evitramd):
         if cp.get('Experiment', 'PREFIX') == 'MNIST':
             # Save hidden/output layer results for pipeline training
             px_Z_latent = utils.run_OOM(sess, evitram_dict['conv_in'], XX_full,
-                          pae_dict['conv_z'],
+                          evitram_dict['conv_z'],
                           batch_size=batch_size)
             # Save latent space
             utils.save_OOM(sess, evitram_dict['conv_in'], XX_full,
-            pae_dict['conv_z'],
+            evitram_dict['conv_z'],
             path='COND_'+cp.get('Experiment', 'PX_Z_FULL'),
             batch_size=batch_size)
 
             # Save reconstruction
             utils.save_OOM(sess, evitram_dict['conv_in'], XX_full,
-            pae_dict['conv_out'],
+            evitram_dict['conv_out'],
             path=cp.get('Experiment', 'PX_XREC_TRAIN'),
             batch_size=batch_size)
         else:
@@ -169,7 +169,7 @@ def evitram(evitramd):
                                         batch_size=batch_size)
 
             utils.save_OOM(sess, evitram_dict['sda_in'], XX_full,
-            pae_dict['sda_hidden'],
+            evitram_dict['sda_hidden'],
             path='COND_'+cp.get('Experiment', 'PX_Z_FULL'),
             batch_size=batch_size)
 

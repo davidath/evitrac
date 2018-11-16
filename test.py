@@ -134,8 +134,8 @@ def evitram(evitramd):
 
         if cp.get('Experiment', 'PREFIX') == 'MNIST':
             # Save hidden/output layer results for pipeline training
-            px_Z_latent = utils.run_OOM(sess, pae_dict['conv_in'], XX_full,
-                          pae_dict['conv_z'],
+            px_Z_latent = utils.run_OOM(sess, evitram_dict['conv_in'], XX_full,
+                          evitram_dict['conv_z'],
                           batch_size=batch_size)
         else:
             px_Z_latent = utils.run_OOM(sess, evitram_dict['sda_in'], XX_full,
